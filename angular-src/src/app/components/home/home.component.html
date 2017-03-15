@@ -1,0 +1,41 @@
+<div class="jumbotron text-center">
+  <h1>MEAN Authentication App</h1>
+  <p class="lead">Welcome to our custom MEAN authentication application built from scratch</p>
+  <div>
+    <a class="btn btn-primary btn-sm" [routerLink]="['/register']"><i class="fa fa-user-plus" aria-hidden="true"></i> Reginster</a>
+    <a class="btn btn-default btn-sm" [routerLink]="['/login']"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
+    <a class="btn btn-info btn-sm" (click)="staticModal.show()">Static modal</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h3>Express Backend</h3>
+    <p>A rock solid Node.js/Express server using Mongoose to organize models and query the database</p>
+  </div>
+  <div class="col-md-4">
+    <h3>Angular-CLI</h3>
+    <p>Angular-CLI to generate components, services and more. Local dev server and easy compilation</p>
+  </div>
+  <div class="col-md-4">
+    <h3>JWT Tokens</h3>
+    <p>Full featured authentication using JSON web tokens. Login and store user data</p>
+  </div>
+</div>
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Static modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This is static modal, backdrop click will not close it.
+        Click <b>&times;</b> to close modal.
+      </div>
+    </div>
+  </div>
+</div>
